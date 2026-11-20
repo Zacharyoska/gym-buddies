@@ -1,0 +1,28 @@
+{
+  "name": "gym-buddies",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Subscription and membership management system for Gym Buddies by Jahren & Charles",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node scripts/seed.js",
+    "clear": "node scripts/clear-data.js",
+    "set-password": "node scripts/set-password.js",
+    "setup:remote": "node scripts/remote-setup.js",
+    "deploy": "node scripts/deploy.js",
+    "deploy:easy": "node scripts/deploy-easy.js",
+    "deploy:check": "node scripts/deploy.js --check",
+    "test": "npm run test:local && npm run test:async",
+    "test:local": "node --test --test-concurrency=1",
+    "test:async": "node scripts/run-async-tests.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@libsql/client": "^0.18.0"
+  }
+}
